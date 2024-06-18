@@ -1,0 +1,20 @@
+% !TeX TXS-program:compile = txs:///lualatex/[--shell-escape]
+\include{preambule}
+
+% ---------------------- Документ ----------------------
+\begin{document}
+	\normalsize
+	\setcounter{page}{3}
+
+	\renewcommand{\contentsname}{\normalsize\bfseries\centering СОДЕРЖАНИЕ}
+	\small
+	\tableofcontents
+	\normalsize
+
+	\pagebreak
+	
+	\include{03-intro}
+	\include{30-technology}
+	\include{40-research}
+	\include{60-bibliography}
+\end{document}

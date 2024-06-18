@@ -1,0 +1,54 @@
+% !TeX TXS-program:compile = txs:///lualatex/[--shell-escape]
+
+\include{preamble.inc.tex}
+
+\begin{document}
+
+\linespread{1.25}
+
+\include{title.tex}
+
+\normalsize
+\setcounter{page}{5} % 5 or 2
+
+\pagebreak
+
+\include{tex/referat.tex}
+
+\titleformat{\section}[block]
+{\bfseries\noindent\normalsize\centering}{\thesection}{-1em}{}
+\renewcommand{\contentsname}{\normalsize\bfseries СОДЕРЖАНИЕ}
+\small
+\begin{adjustwidth}{-5pt}{0pt}
+\tableofcontents
+\end{adjustwidth}
+\normalsize
+\titleformat{\section}[block]
+{\bfseries\normalsize}{\thesection}{1em}{}
+
+\pagebreak
+\addtolength{\oddsidemargin}{-0.2cm}
+\include{tex/shortage.tex}
+\addtolength{\oddsidemargin}{0.2cm}
+\include{tex/intro.tex}
+\include{tex/analysis.tex}
+\include{tex/construct.tex}
+\include{tex/impl.tex}
+%\addtolength{\oddsidemargin}{-0.2cm}
+\include{tex/research.tex}
+%\addtolength{\oddsidemargin}{0.2cm}
+\include{tex/conclusion.tex}
+
+\include{tex/bibliography.tex}
+
+%\specsection{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+%\addtolength{\oddsidemargin}{-0.25pt}
+%\begingroup
+%\renewcommand{\section}[2]{}
+%\bibliographystyle{utf8gost705u}
+%\bibliography{bibliography}   
+%\endgroup
+
+\include{tex/appendix.tex}
+
+\end{document}
